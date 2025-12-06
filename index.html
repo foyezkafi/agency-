@@ -1,0 +1,245 @@
+<!doctype html>
+<html lang="bn">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Doctypesolution — Creative Agency</title>
+  <meta name="description" content="Doctypesolution — Digital agency: web design, branding, development" />
+  <style>
+    :root{
+      --accent:#0f62fe;
+      --dark:#0b1220;
+      --muted:#6b7280;
+      --card:#0f1724;
+      --glass: rgba(255,255,255,0.04);
+      font-family: Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+    }
+    *{box-sizing:border-box}
+    body{margin:0;background:linear-gradient(180deg,#071022 0%,#0b1220 100%);color:#e6eef8;line-height:1.5}
+    .container{max-width:1100px;margin:0 auto;padding:28px}
+
+    /* header */
+    header{display:flex;align-items:center;justify-content:space-between;padding:18px 0}
+    .brand{display:flex;gap:12px;align-items:center}
+    .logo{width:46px;height:46px;border-radius:10px;background:linear-gradient(135deg,var(--accent),#6dd3ff);display:flex;align-items:center;justify-content:center;color:#071022;font-weight:700}
+    nav{display:flex;gap:18px;align-items:center}
+    nav a{color:var(--muted);text-decoration:none}
+    .cta{background:var(--accent);color:#07203a;padding:10px 14px;border-radius:10px;font-weight:600;text-decoration:none}
+    .hamburger{display:none}
+
+    /* hero */
+    .hero{display:grid;grid-template-columns:1fr 420px;gap:36px;align-items:center;padding:40px 0}
+    .hero h1{font-size:38px;margin:0 0 12px}
+    .hero p{color:var(--muted);margin:0 0 18px}
+    .hero .buttons{display:flex;gap:12px}
+    .card{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));padding:18px;border-radius:14px;box-shadow:0 6px 18px rgba(2,6,23,0.6)}
+
+    /* services */
+    .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:28px}
+    .service{padding:18px;border-radius:12px;background:var(--glass);border:1px solid rgba(255,255,255,0.03)}
+    .service h3{margin-top:8px;margin-bottom:6px}
+    .service p{color:var(--muted);margin:0}
+
+    /* portfolio */
+    .portfolio{margin-top:36px}
+    .works{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+    .work{height:140px;border-radius:10px;overflow:hidden;background-size:cover;background-position:center}
+
+    /* contact */
+    .contact{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:32px}
+    label{display:block;font-size:13px;color:var(--muted);margin-bottom:6px}
+    input,textarea{width:100%;padding:10px;border-radius:8px;border:1px solid rgba(255,255,255,0.06);background:transparent;color:inherit}
+    .btn{display:inline-block;padding:10px 14px;border-radius:10px;background:var(--accent);color:#07203a;font-weight:600;text-decoration:none;border:none;cursor:pointer}
+
+    footer{margin-top:48px;padding:28px 0;color:var(--muted);border-top:1px solid rgba(255,255,255,0.03)}
+
+    /* responsive */
+    @media (max-width:980px){
+      .hero{grid-template-columns:1fr}
+      .grid{grid-template-columns:repeat(2,1fr)}
+      .works{grid-template-columns:repeat(2,1fr)}
+    }
+    @media (max-width:640px){
+      nav{display:none}
+      .hamburger{display:block;color:var(--muted);cursor:pointer}
+      .grid{grid-template-columns:1fr}
+      .works{grid-template-columns:1fr}
+      .contact{grid-template-columns:1fr}
+    }
+    .logo img{
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+    }
+    body{
+      background: #FFFFFF;
+    }
+    .hdtext{
+      color: #663807;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="brand">
+        <div class="logo">
+          <img src="images/logo.jpg" alt="logo">
+        </div>
+        <div >
+          <div class="hdtext" style="font-weight:700">Doctypesolution</div>
+          <div class="hdtext" style="font-size:13px">Creative Digital Agency</div>
+        </div>
+      </div>
+
+      <nav>
+        <a href="#services">Services</a>
+        <a href="#portfolio">Portfolio</a>
+        <a href="#about">About</a>
+        <a href="#contact" class="cta">Contact</a>
+      </nav>
+
+      <div class="hamburger" onclick="toggleMenu()">☰</div>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div>
+          <h1 class="hdtext">We build clean, fast & beautiful websites</h1>
+          <p >Doctypesolution is a full-service digital agency — web development, branding, UI/UX design and ongoing support. We help businesses grow online with modern, conversion-focused websites.</p>
+          <div class="buttons">
+            <a class="btn" href="#contact">Get a Quote</a>
+            <a class="card" href="#portfolio" style="text-decoration:none;color:inherit;display:inline-flex;align-items:center;padding:10px 14px;border-radius:10px">See portfolio →</a>
+          </div>
+
+          <div class="card" style="margin-top:18px">
+            <strong>Quick facts</strong>
+            <div style="display:flex;gap:14px;margin-top:10px;color:var(--muted)">
+              <div>
+                <div style="font-weight:700">12+</div>
+                <div style="font-size:13px">Projects</div>
+              </div>
+              <div>
+                <div style="font-weight:700">8</div>
+                <div style="font-size:13px">Clients</div>
+              </div>
+              <div>
+                <div style="font-weight:700">24/7</div>
+                <div style="font-size:13px">Support</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <aside class="card">
+          <h3>Our Featured Service</h3>
+          <p style="color:var(--muted)">Complete website builds: responsive design, SEO basics, performance optimization and CMS integration (WordPress / Headless).</p>
+          <ul style="color:var(--muted);margin-top:12px;padding-left:18px">
+            <li>Custom design & UI/UX</li>
+            <li>Front-end (React/Vue) & Back-end</li>
+            <li>E-commerce & Payment setup</li>
+          </ul>
+        </aside>
+      </section>
+
+      <section id="services">
+        <h2 style="margin-top:10px">Services</h2>
+        <div class="grid">
+          <div class="service card">
+            <div style="font-size:20px;font-weight:700">Web Development</div>
+            <p>Responsive, fast sites with clean code. React, Next.js, or WordPress depending on needs.</p>
+          </div>
+          <div class="service card">
+            <div style="font-size:20px;font-weight:700">Branding & Design</div>
+            <p>Logo, brand guideline, and UI/UX designs that convert visitors into customers.</p>
+          </div>
+          <div class="service card">
+            <div style="font-size:20px;font-weight:700">E-commerce</div>
+            <p>Online stores with secure payments, product management, and analytics.</p>
+          </div>
+        </div>
+      </section>
+
+      <section id="portfolio" class="portfolio">
+        <h2 style="margin-top:30px">Portfolio</h2>
+        <div class="works">
+          <div class="work" style="background-image:url('https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=800&q=60')"></div>
+          <div class="work" style="background-image:url('https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=800&q=60')"></div>
+          <div class="work" style="background-image:url('https://images.unsplash.com/photo-1508921912186-1d1a45ebb3c1?auto=format&fit=crop&w=800&q=60')"></div>
+        </div>
+      </section>
+
+      <section id="about" style="margin-top:28px">
+        <h2>About Doctypesolution</h2>
+        <p style="color:var(--muted)">We are a small team of designers and developers focused on delivering high-quality digital products for businesses in Bangladesh and abroad. Clear communication, deadlines, and transparent pricing are our promise.</p>
+      </section>
+
+      <section id="contact" class="contact">
+        <div class="card">
+          <h3>Contact Us</h3>
+          <p style="color:var(--muted)">Send a message and we will get back within 24 hours.</p>
+          <form onsubmit="submitForm(event)">
+            <label for="name">Name</label>
+            <input id="name" required placeholder="Your name" />
+
+            <label for="email">Email</label>
+            <input id="email" type="email" required placeholder="you@example.com" />
+
+            <label for="message">Message</label>
+            <textarea id="message" rows="5" required placeholder="Project details..."></textarea>
+
+            <div style="margin-top:12px">
+              <button class="btn" type="submit">Send Message</button>
+            </div>
+          </form>
+          <p id="notice" style="color:var(--muted);margin-top:8px;font-size:13px"></p>
+        </div>
+
+        <div class="card">
+          <h3>Office</h3>
+          <p style="color:var(--muted)">Dhaka, Bangladesh<br/>Email: hello@doctypesolution.com<br/>Phone: +880 1X XXX XXXX</p>
+
+          <h4 style="margin-top:12px">Why choose us?</h4>
+          <ul style="color:var(--muted);padding-left:18px">
+            <li>Local team, global standards</li>
+            <li>Transparent pricing</li>
+            <li>Maintenance & support</li>
+          </ul>
+        </div>
+      </section>
+
+    </main>
+
+    <footer>
+      <div style="display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap">
+        <div>© <strong>Doctypesolution</strong> — All rights reserved</div>
+        <div style="color:var(--muted)">Built with care • Need changes? Click <a href="#contact" style="color:var(--accent);text-decoration:none">here</a></div>
+      </div>
+    </footer>
+  </div>
+
+  <script>
+    function toggleMenu(){
+      const nav = document.querySelector('nav');
+      nav.style.display = nav.style.display === 'flex' ? 'none' : 'flex';
+    }
+
+    function submitForm(e){
+      e.preventDefault();
+      const name = document.getElementById('name').value.trim();
+      const email = document.getElementById('email').value.trim();
+      const message = document.getElementById('message').value.trim();
+
+      if(!name || !email || !message){
+        document.getElementById('notice').textContent = 'সব ফিল্ড পূরণ করুন।';
+        return;
+      }
+
+      // এই ডেমো ফাইলটি সার্ভারে সাবমিট করে না — আপনি জাভাস্ক্রিপ্ট দিয়ে API যোগ করতে পারবেন বা
+      // ইমেইল/সার্ভার সাইড স্ক্রিপ্ট কনফিগার করতে পারেন।
+      document.getElementById('notice').textContent = 'ধন্যবাদ! আপনার মেসেজ পাঠানো হয়েছে (ডেমো)।';
+      e.target.reset();
+    }
+  </script>
+</body>
+</html>
